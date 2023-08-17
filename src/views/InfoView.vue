@@ -1,6 +1,7 @@
 <script setup>
   import { defineComponent } from 'vue';
-  import InfoMobile from '@/components/info_blocks/InfoMobile.vue'
+  import InfoMobile from '@/components/info_blocks/InfoMobile.vue';
+  import InfoDesktop from '@/components/info_blocks/InfoDesktop.vue';
 </script>
 
 <script>
@@ -10,7 +11,12 @@
 </script>
 
 <template>
-  <div>
+
+  <section class="info-desktop-section">
+    <InfoDesktop/>
+  </section>
+
+  <section class="info-mobile-section">
     <InfoMobile/>
-  </div>
+  </section>
 </template>

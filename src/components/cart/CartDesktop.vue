@@ -103,13 +103,13 @@
 				</div>
 
 				<div class="container" v-else>
-					<div class="cart-header__breadcrumbs">
-						<div class="cart-header__breadcrumb cart-header__breadcrumb-main" @click="$router.push({name: 'home'})">Главная</div>
-						<span class="cart-header__breadcrumb-separator">/</span>
-						<div class="cart-header__breadcrumb">Корзина</div>
+					<div class="page-header__breadcrumbs">
+						<div class="page-header__breadcrumb page-header__breadcrumb-main" @click="$router.push({name: 'home'})">Главная</div>
+						<span class="page-header__breadcrumb-separator">/</span>
+						<div class="page-header__breadcrumb">Корзина</div>
 					</div>
-					<div class="cart-header__top">
-						<h3 class="cart-header__title">Корзина</h3>
+					<div class="cart-header__top page-header__top">
+						<h3 class="cart-header__title page-header__title">Корзина</h3>
 						<div class="cart-header__remove" @click="modalMenu">
 							<img src="@/assets/img/icons/trash.png" alt="" class="cart-header__remove-img">
 							Очистить

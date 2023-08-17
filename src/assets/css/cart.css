@@ -1,8 +1,3 @@
-.cart-desktop {
-  padding: 30px 0 60px;
-  min-height: 70vh;
-}
-
 .modal-card__descr{
   font-size: 16px;
 }
@@ -41,12 +36,6 @@
   margin-right: 10px;
 }
 
-.cart-header__breadcrumbs {
-  display: flex;
-  margin-bottom: 30px;
-  font-size: 14px;
-}
-
 .cart-header__top {
   width: 100%;
   display: flex;
@@ -72,15 +61,6 @@
 .cart-header__price {
   width: 15%;
   padding-left: 15px
-}
-
-.cart-header__breadcrumb-main {
-  color: var(--cl_red);
-  cursor: pointer;
-}
-
-.cart-header__breadcrumb-separator {
-  margin: 0 10px;
 }
 
 .cart-header__title {

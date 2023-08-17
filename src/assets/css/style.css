@@ -273,3 +273,37 @@ body{
     background: #fff;
     color: #ca1931;
   }
+
+.page-header__breadcrumbs {
+  display: flex;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.page-header__breadcrumb-main {
+  color: var(--cl_red);
+  cursor: pointer;
+}
+
+.page-header__breadcrumb-separator {
+  margin: 0 10px;
+}
+
+.page-header__top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.page-header__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-desktop,
+.info-desktop {
+  padding: 30px 0 60px;
+  min-height: 70vh;
+}

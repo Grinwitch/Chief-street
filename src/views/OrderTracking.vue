@@ -8,6 +8,14 @@
 
       <div class="tracking">
         <div class="tracking__content">
+          <div class="page-header__breadcrumbs">
+            <div class="page-header__breadcrumb page-header__breadcrumb-main" @click="$router.push({name: 'home'})">Главная</div>
+            <span class="page-header__breadcrumb-separator">/</span>
+            <div class="page-header__breadcrumb">Отслеживание заказа</div>
+          </div>
+          <div class="page-header__top">
+            <h3 class="page-header__title">Отслеживание заказа</h3>
+          </div>
           <div class="tracking-top__content">
             <h3 class="tracking__title">Заказ: 11817543025</h3>
             <div class="tracking-top__content-block">

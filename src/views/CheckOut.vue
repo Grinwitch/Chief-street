@@ -85,7 +85,14 @@
 				<div class="container">
 					<section class="checkout">
 						<div class="checkout__content">
-							<h2 class="checkout-content__title">Оформление заказа</h2>
+              <div class="page-header__breadcrumbs">
+                <div class="page-header__breadcrumb page-header__breadcrumb-main" @click="$router.push({name: 'home'})">Главная</div>
+                <span class="page-header__breadcrumb-separator">/</span>
+                <div class="page-header__breadcrumb">Оформление заказа</div>
+              </div>
+              <div class="page-header__top">
+                <h3 class="page-header__title">Оформление заказа</h3>
+              </div>
 							<div class="checkout-content__items">
 								<div class="checkout-content__item-left">
 

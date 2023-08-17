@@ -5,6 +5,15 @@
 	}
 }
 
+@media screen and (min-width: 601px) {
+	.info-desktop-section {
+		display: block;
+	}
+
+	.info-mobile-section {
+		display: none;
+	}
+}
 
 @media screen and (max-width: 992px) {
 	.m-modal-product__cart_icon{
@@ -67,7 +76,8 @@
 	.product-cart__price,
 	.home-products__cart-descr,
 	.bottom-header__card-block,
-	.cart-desktop-dt{
+	.cart-desktop-dt,
+	.info-desktop-section {
 		display: none;
 	}
 
@@ -85,7 +95,8 @@
 	.home__about-mobile-block,
 	.bottom-header__mobile-block,
 	.mobile-header,
-	.mobile-cart-dt {
+	.mobile-cart-dt,
+	.info-mobile-section {
 		display: block;
 	}
 
