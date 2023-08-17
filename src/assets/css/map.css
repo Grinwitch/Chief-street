@@ -1,0 +1,342 @@
+.delivery-map {
+    /*display: none;*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 501;
+    background: #eee;
+}
+
+.delivery-map__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 220;
+}
+
+.delivery-map__yandex {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+.delivery-map__yandex-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.delivery-map__pin {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: calc(50% - 32px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 247;
+}
+
+.delivery-map__dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #33333399;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 248;
+}
+
+.delivery-map__close {
+    background: var(--cl_white);
+    padding: 8.5px 14px;
+    border-radius: 12px;
+    border: 0;
+    background: #eee;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--cl_black);
+    z-index: 247;
+}
+
+.delivery-map__close-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 7.5px;
+}
+
+.delivery-map__content {
+    width: 400px;
+    height: 226px;
+    background: #fff;
+    top: 15px;
+    left: 15px;
+    z-index: 247;
+    border-radius: 25px;
+    position: absolute;
+    box-shadow: 1px 1px 10px #33333355;
+}
+
+.delivery-map__content-container {
+    padding: 20px 20px 10px;
+    position: relative;
+}
+
+.delivery-map__content-top {
+    width: 100%;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.delivery-map__content-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.delivery-map__content-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.delivery-map__content-address {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.delivery-map__content-home {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 15px;
+}
+
+.delivery-map__content-office {
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.delivery-map__content-intercom {
+    width: 49%;
+    margin-right: 2%;
+}
+
+.delivery-map__content-entrance {
+    width: 23.5%;
+    margin-right: 2%;
+}
+
+.delivery-map__content-floor {
+    width: 23.5%;
+}
+
+.delivery-map__content-input {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #33333344; 
+    font-size: 16px;
+}
+
+.delivery-map__content-address .delivery-map__content-input {
+    padding-right: 40px;
+}
+
+.delivery-map__content-gpc {
+    position: absolute;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+}
+
+.pickup-map {
+    /*display: none;*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 501;
+}
+
+.pickup-map__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 220;
+}
+
+.pickup-map__yandex {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    background: #eee;
+}
+
+.pickup-map__yandex-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.pickup-map__pin {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: calc(50% - 32px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 247;
+}
+
+.pickup-map__dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #33333399;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 248;
+}
+
+.pickup-map__close {
+    background: var(--cl_white);
+    padding: 8.5px 14px;
+    border-radius: 12px;
+    border: 0;
+    background: #eee;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: var(--cl_black);
+    z-index: 247;
+    margin: 0;
+}
+
+.pickup-map__close-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 7.5px;
+}
+
+.pickup-map__content {
+    width: 400px;
+    height: 285px;
+    background: #fff;
+    top: 15px;
+    left: 15px;
+    z-index: 247;
+    border-radius: 25px;
+    position: absolute;
+    box-shadow: 1px 1px 10px #33333355;
+    overflow: hidden;
+}
+
+.pickup-map__content-container {
+    padding: 20px 20px 10px;
+    position: relative;
+}
+
+.pickup-map__content-top {
+    border-bottom: 1px solid #33333355;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pickup-map__content-title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: end;
+}
+
+.pickup-map__content-status-green:before {
+    background: #2b4;
+}
+
+.pickup-map__content-status-yellow:before {
+    background: #fd0;
+}
+
+.pickup-map__content-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.pickup-map__content-items::-webkit-scrollbar {
+    display: none;
+}
+
+.pickup-map__content-item {
+    width: 100%;
+    padding: 8.5px 0;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    border: 0;
+    text-align: left;
+    touch-action: auto;
+}
+
+.pickup-map__content-item:not(:last-child) {
+    border-bottom: 1px solid #33333355;
+}
+
+.pickup-map__item-active:not(:last-child) {
+    border-bottom: 1px solid var(--cl_red);
+}
+
+.pickup-map__item-title {
+    font-weight: 600;
+    margin-bottom: 2.5px;
+    color: var(--cl_black);
+}
+
+.pickup-map__item-active .pickup-map__item-title {
+    color: var(--cl_red);
+}
+
+.pickup-map__item-address {
+    color: #888888;
+    font-size: 14px;
+}
+
+.pickup-map__item-status {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #eee;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.pickup-map__item-active .pickup-map__item-status {
+    background: var(--cl_red);
+}
