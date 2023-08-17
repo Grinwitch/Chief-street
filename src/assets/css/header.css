@@ -13,6 +13,9 @@
 	background-color: var(--cl_white);
 }
 
+.header__left-block-logo-block{
+	cursor: pointer;
+}
 
 .header__block{
 	width: 100%;
@@ -340,7 +343,7 @@
 	width: 100%;
 	background-color: var(--cl_white);
 	padding: 10px 20px 30px 20px;
-	z-index: 240;
+	z-index: 241;
 	border-top: 1px solid rgba(177, 177, 177, 0.12);
 }
 

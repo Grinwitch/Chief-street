@@ -12,33 +12,25 @@
             <h3 class="tracking__title">Заказ: 11817543025</h3>
             <div class="tracking-top__content-block">
               <ul class="tracking-top__content-block-points">
-                <li>
-                  <div class="tracking-top-point">Дата:</div>
-                  <div class="tracking-top__content-point-date tracking-top__content-point-info">15.08.2023</div>
+                <li>Дата:</li>
+                <li>Оплата:</li>
+                <li>Статус оплаты:</li>
+                <li>Доставка:</li>
+                <li>Итого:</li>
+              </ul>
+              <ul class="tracking-top__content-block-points-info">
+                <li class="tracking-top__content-point-date tracking-top__content-point-info">15.08.2023</li>
+                <li class="tracking-top__content-point-payment tracking-top__content-point-info">Онлайн через Kaspi.kz</li>
+                <li class="tracking-top__content-point-payment-status tracking-top__content-point-info">
+                  <span class="tracking-top__content-point-payment-status-overdue">Просрочено</span>
+                  <span class="tracking-top__content-point-payment-status-await" style="margin-left: 10px;">Ожидается оплата</span>
+                  <span class="tracking-top__content-point-payment-status-confirmed" style="margin-left: 10px;">Оплачено</span>
+                  <a class="tracking-top__content-point-payment-status-link tracking-top__content-point-info">
+                    Оплатить
+                  </a>
                 </li>
-                <li>
-                  <div class="tracking-top-point">Оплата:</div>
-                  <div class="tracking-top__content-point-payment tracking-top__content-point-info">Онлайн через Kaspi.kz</div>
-                </li>
-                <li>
-                  <div class="tracking-top-point">Статус оплаты:</div>
-                  <div class="tracking-top__content-point-payment-status tracking-top__content-point-info">
-                    <span class="tracking-top__content-point-payment-status-overdue">Просрочено</span>
-                    <span class="tracking-top__content-point-payment-status-await" style="margin-left: 10px;">Ожидается оплата</span>
-                    <span class="tracking-top__content-point-payment-status-confirmed" style="margin-left: 10px;">Оплачено</span>
-                    <a class="tracking-top__content-point-payment-status-link tracking-top__content-point-info">
-                      Оплатить
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div class="tracking-top-point">Доставка:</div>
-                  <div class="tracking-top__content-point-delivery-method tracking-top__content-point-info">Самовывоз</div>
-                </li>
-                <li>
-                  <div class="tracking-top-point">Итого:</div>
-                  <div class="tracking-top__content-point-price-total tracking-top__content-point-info">1450 ₸</div>
-                </li>
+                <li class="tracking-top__content-point-delivery-method tracking-top__content-point-info">Самовывоз</li>
+                <li class="tracking-top__content-point-price-total tracking-top__content-point-info">1450 ₸</li>
               </ul>
             </div>
           </div>

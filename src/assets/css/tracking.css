@@ -35,6 +35,7 @@
 
 .tracking-center__content-block {
     background: #fce389;
+    line-height: 140%;
 }
 
 .tracking-center__content-block strong{
@@ -56,9 +57,7 @@
 }
 
 .tracking-top__content-block-points li {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    font-weight: 600;
     font-size: 14px;
 }
 
@@ -78,16 +77,6 @@
 .tracking-top__content-point-info,
 .tracking-center__content-block {
     font-size: 14px;
-}
-
-.tracking-top__content-point-payment-status {
-    display: flex;
-    align-items: center;
-}
-
-.tracking-top-point {
-    font-weight: 600;
-    width: 125px;
 }
 
 /* Payment Status */

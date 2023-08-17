@@ -6,4 +6,11 @@ export const percentCalculate = (num, percent) => {
     return num - ((num / 100) * percent)
 }
 
-export default {priceStyle, percentCalculate};
+export const bodyOvr = (state) => {
+	let body = document.querySelector('body').style;
+	body.overflow = (state) ? 'hidden' : 'auto';
+
+	return state;
+}
+
+export default {priceStyle, percentCalculate, bodyOvr};

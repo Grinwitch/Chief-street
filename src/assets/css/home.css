@@ -17,6 +17,12 @@
   margin-bottom: 25px;
 }
 
+.m-modal-product__cart_plus, 
+.m-modal-product__cart_minus{
+  cursor: pointer;
+}
+
+
 .home-products__carts {
   width: 100%;
   display: grid;

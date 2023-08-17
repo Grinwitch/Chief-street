@@ -3,6 +3,28 @@
   padding-bottom: 2%;
 }
 
+.check-out{
+  position: relative;
+}
+
+.check-out__preloader-block{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  z-index: 100;
+  /* display: none; */
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.check-out__preloader-container{
+  width: 80px;
+  height: 80px;
+}
+
 .checkout__content {
   width: 100%;
   padding: 0 15px;
@@ -414,9 +436,9 @@
   font-size: 16px;
 }
 
-.checkout-label__pickup, 
-.checkout-content__item-descr-textarea, 
-.checkout-label__descr, 
+.checkout-label__pickup,
+.checkout-content__item-descr-textarea,
+.checkout-label__descr,
 .checkout-content__item-pickup-input,
 .checkout-label__name,
 .checkout-label__phone,
@@ -444,6 +466,18 @@
   left: 35px;
   cursor: default;
   color: var(--cl_red);
+}
+
+.lab_active{
+  cursor: default;
+  position: absolute;
+  top: -5px;
+  left: 35px;
+  font-size: 13px;
+  color: #888888;
+  background-color: var(--cl_white);
+  padding: 0 2px;
+  cursor: text;
 }
 
 .checkout-content__item-left-descr {

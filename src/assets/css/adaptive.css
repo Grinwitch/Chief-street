@@ -7,6 +7,20 @@
 
 
 @media screen and (max-width: 992px) {
+	.m-modal-product__cart_icon{
+		width: 12px;
+	}
+
+	.cart-header__item .m-modal-product__cart_minus,
+	.cart-header__item .m-modal-product__cart_plus{
+		width: 30px;
+    padding: 10px 15px;
+	}
+
+	.m-modal-product__cart_value{
+		padding: 15px 10px;
+	}
+
 	.container{
 		max-width: 720px;
 	}
@@ -228,6 +242,7 @@
 	.home__about-navigation-nva-item {
 		padding: 10px 5px;
 		font-size: 14px;
+		transition: all .3s;
 	}
 
 	.header__left-block-logo{
@@ -591,7 +606,6 @@
 	  display: block;
 	  margin: 0 auto;
 	  border-radius: 10px;
-	  /* background-color: #007544; */
 	  border: none;
 	  font-size: 16px;
 	  font-weight: 300;
@@ -602,7 +616,7 @@
 	  text-align: center;
 	  cursor: pointer;
 	  padding: 4px 20px;
-	  background-color: #ea5f63;
+	  background-color: #17802e;
 	  transition: 0.3s;
 	  width: 100%;
 	  display: flex;
@@ -675,20 +689,8 @@
 		padding-bottom: 27%;
 	}
 
-	.tracking-top-point {
-		width: 25%;
-		display: flex;
-		align-items: center;
-	}
-
-	.tracking-top__content-point-payment-status {
-		flex-wrap: wrap;
-	}
-}
-
-@media screen and (max-width: 435px) {
-	.tracking-top__content-point-payment-status-link {
-		margin-top: 5px;
+	.tracking {
+		padding: 15px 0;
 	}
 }
 

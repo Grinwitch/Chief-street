@@ -1,15 +1,22 @@
 <script setup>
 	import { defineComponent } from 'vue';
 	import { fakePoints } from '@/fakeDB.js';
+	import {bodyOvr} from "@/util/utils.js";
 	import MapBlock from '@/components/MapBlock.vue';
   import PickupMap from '@/components/PickupMap.vue';
+
+	const bodyOvrS = (state) => bodyOvr(state);
 </script>
 
 <script>
 	export default defineComponent({
 		name: "CheckOut",
+		computed: {
+			shoppingCart(){return this.$store.getters.shoppingCart},
+		},
 		data(){
 			return{
+				reqState: true,
 				mapState: false,
         pickupMapState: false,
         points: fakePoints,
@@ -26,13 +33,39 @@
         	}
         }
 			}
+		},
+		mounted(){
+			// reqState
+			setTimeout(this.fakeReqState, 1000);
+		},
+		methods:{
+			fakeReqState: function(){
+				this.reqState = false;
+			},
+		},
+		watch:{
+			'checkOutData.userInfo.username': function(newValue, oldValue){
+				let len = newValue.length - 1;
+				if (newValue.length === 0 || newValue[len].charCodeAt() === 32) return
+
+				if (newValue[len].charCodeAt() < 1040 || newValue[len].charCodeAt() > 1103)
+					this.checkOutData.userInfo.username = oldValue;
+			}
 		}
 	})
 </script>
 
 
 <template>
-	<div>
+	<div class="check-out">
+		<Transition>
+			<div class="check-out__preloader-block" v-show="bodyOvrS(reqState)">
+				<div class="check-out__preloader-container">
+					<slot name="preloader"></slot>
+				</div>
+			</div>
+		</Transition>
+
 		<Transition name="deliver-map">
 			<div class="delivery-map" v-if="mapState">
 				<MapBlock @closeModal="mapState = false;"/>
@@ -40,9 +73,9 @@
 		</Transition>
     <Transition name="deliver-map">
       <div class="pickup-map delivery-map" v-if="pickupMapState">
-        <PickupMap :selectionPointId="checkOutData.pickupPointId" 
+        <PickupMap :selectionPointId="checkOutData.pickupPointId"
         					 :points="points"
-        					 @closeModal="pickupMapState = false;" 
+        					 @closeModal="pickupMapState = false;"
         					 @selectId="(data) => {checkOutData.pickupPointId = parseInt(data.id)}"/>
       </div>
     </Transition>
@@ -62,22 +95,22 @@
 											<span class="checkout-content__item-left-point">1</span>
 											<h3 class="checkout-content__item-left-title">Адрес</h3>
 										</div>
-										
+
 										<div class="checkout-content__item-left-descr">
 											* Доставка осуществляется в пределах нашей зоны доставки, пожалуйста, ознакомьтесь с ней
 										</div>
-										
+
 										<div class="checkout-content__item-left-info">
-											<button v-bind:class="['checkout-content__info-block', 
-																						(checkOutData.adrIndicateState) ? 'checkout-content__item-active' : '']" 
+											<button v-bind:class="['checkout-content__info-block',
+																						(checkOutData.adrIndicateState) ? 'checkout-content__item-active' : '']"
 															@click="mapState = true; checkOutData.adrIndicateState = true">
-												
+
 												<label for="address1" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
 													<input type="radio" name="cart-address__type" class="modal-card__list-input radiobutton-input" id="address1" value="address">
 													<h4 class="checkout-content__info-block-title">Указать адрес</h4>
 												</label>
-												
+
 												<div class="checkout-content__info-block-bottom"></div>
 												<div class="checkout-content__info-block-faq">?</div>
 												<div class="checkout-content__info-block-faq-text">
@@ -85,8 +118,8 @@
 												</div>
 											</button>
 
-											<button v-bind:class="['checkout-content__info-block', 
-																						(checkOutData.adrIndicateState === false) ? 'checkout-content__item-active' : '']" 
+											<button v-bind:class="['checkout-content__info-block',
+																						(checkOutData.adrIndicateState === false) ? 'checkout-content__item-active' : '']"
 															@click="checkOutData.adrIndicateState = false">
 												<label for="address2" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
@@ -107,7 +140,7 @@
 											</div>
 										</Transition>
 									</div>
-									
+
 									<!-- Delivery Type -->
 									<div class="checkout-content__item-left-block">
 										<div class="checkout-content__item-left-header">
@@ -116,11 +149,11 @@
 										</div>
 										<div class="checkout-content__item-left-descr"></div>
 										<div class="checkout-content__item-left-info">
-											
-											<button v-bind:class="['checkout-content__info-block', 
-																						(checkOutData.deliveryState) ? 'checkout-content__item-active' : '']" 
+
+											<button v-bind:class="['checkout-content__info-block',
+																						(checkOutData.deliveryState) ? 'checkout-content__item-active' : '']"
 															@click="checkOutData.deliveryState = true;">
-												
+
 												<label for="deliver1" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
 													<input type="radio" name="cart-deliver__type" class="modal-card__list-input radiobutton-input" id="deliver1" value=" deliver">
@@ -131,11 +164,11 @@
 												<span class="checkout-content__info-block-faq">?</span>
 												<span class="checkout-content__info-block-faq-text">Укажите место на карте в пределах зоны доставки. Это позволит нам быстрее осуществить доставку.</span>
 											</button>
-											
-											<button v-bind:class="['checkout-content__info-block', 
+
+											<button v-bind:class="['checkout-content__info-block',
 																						(checkOutData.deliveryState === false) ? 'checkout-content__item-active' : '']"
 															@click="pickupMapState = true; checkOutData.deliveryState = false;">
-												
+
 												<label for="deliver2" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
 													<input type="radio" name="cart-deliver__type" class="modal-card__list-input radiobutton-input" id="deliver2" value=" deliver">
@@ -158,9 +191,9 @@
 										</div>
 										<div class="checkout-content__item-left-descr"></div>
 										<div class="checkout-content__item-left-info">
-											
-											<button v-bind:class="['checkout-content__info-block', 
-																						(checkOutData.paydType === 'kaspi') ? 'checkout-content__item-active' : '']" 
+
+											<button v-bind:class="['checkout-content__info-block',
+																						(checkOutData.paydType === 'kaspi') ? 'checkout-content__item-active' : '']"
 																						@click="checkOutData.paydType = 'kaspi'">
 												<label for="payment1" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
@@ -173,8 +206,8 @@
 												<span class="checkout-content__info-block-faq-text">Укажите место на карте в пределах зоны доставки. Это позволит нам быстрее осуществить доставку.</span>
 											</button>
 
-											<button v-bind:class="['checkout-content__info-block', 
-																						(checkOutData.paydType === 'card') ? 'checkout-content__item-active' : '']" 
+											<button v-bind:class="['checkout-content__info-block',
+																						(checkOutData.paydType === 'card') ? 'checkout-content__item-active' : '']"
 															@click="checkOutData.paydType = 'card'">
 												<label for="payment2" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
@@ -190,7 +223,7 @@
 											</button>
 										</div>
 									</div>
-									
+
 									<!-- User info -->
 									<div class="checkout-content__item-left-block">
 										<div class="checkout-content__item-left-header">
@@ -200,22 +233,24 @@
 										<div class="checkout-content__item-left-descr"></div>
 										<div class="checkout-content__item-left-info checkout-contacts">
 											<div class="checkout-content__item-left-name">
-												<input type="text" 
-															 class="checkout-content__item-name-input checkout-input" 
+												<input type="text"
+															 class="checkout-content__item-name-input checkout-input"
 															 v-model="checkOutData.userInfo.username">
-												<label for="checkout-name" class="checkout-label__name">Имя *</label>
+												<label for="checkout-name" v-bind:class="[(checkOutData.userInfo.username.length > 0) ? 'lab_active' : 'checkout-label__name']">Имя *</label>
 											</div>
 											<div class="checkout-content__item-left-phone">
-												<input type="tel" 
+												<input type="tel"
 															 class="checkout-content__item-phone-input checkout-input"
 															 v-model="checkOutData.userInfo.phoneNumber">
-												<label for="checkout-phone" class="checkout-label__phone">Номер телефона *</label>
+												<label for="checkout-phone" class="lab_active">Номер телефона *</label>
 											</div>
 											<div class="checkout-content__item-left-descr">
-												<textarea name="description" id="checkout-descr" cols="30" rows="10" 
+												<textarea name="description" id="checkout-descr" cols="30" rows="10"
 																	class="checkout-content__item-descr-textarea"
 																	v-model="checkOutData.userInfo.comment"></textarea>
-												<label for="checkout-descr" class="checkout-label__descr">Добавьте комментарий *</label>
+												<label for="checkout-descr" v-bind:class="[(checkOutData.userInfo.comment.length > 0) ? 'lab_active' : 'checkout-label__descr']">
+													Добавьте комментарий *
+												</label>
 											</div>
 										</div>
 									</div>
@@ -227,8 +262,8 @@
 											<div class="checkout-content__item-right-title">Ваш заказ</div>
 											<div class="checkout-content__item-right-quantity">
 												<span class="checkout-content__item-quantity-text">Кол-во товаров в корзине</span>
-												<a class="checkout-content__item-quantity-count" 
-													 @click="$router.push({name: 'cart'})">2</a>
+												<a class="checkout-content__item-quantity-count"
+													 @click="$router.push({name: 'cart'})">{{Object.keys(shoppingCart).length}}</a>
 											</div>
 											<div class="checkout-content__item-right-deliver">
 												<span class="checkout-content__item-deliver-text">Доставка</span>
@@ -245,7 +280,9 @@
 												<h3 class="checkout-content__item-bottom-title">Сумма к оплате</h3>
 												<div class="checkout-content__item-bottom-price">1450 ₸</div>
 											</div>
-											<button onclick="changeCount(1, 'plus')" class="checkout-content-product-cart__add">Оформить заказ</button>
+											<button class="checkout-content-product-cart__add" @click="$router.push({name: 'tracking'})">
+												Оформить заказ
+											</button>
 											<p class="checkout-content__item-bottom-descr">Нажимая кнопку «Оформить заказ», я подтверждаю наличие рецепта и ознакомлен с правилами доставки.</p>
 										</div>
 									</div>

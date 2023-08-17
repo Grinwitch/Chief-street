@@ -98,9 +98,13 @@
 							<h1>Корзина пуста</h1>
 						</div>
 
-						<div class="cart-mobile-header__desc-block">
+						<div class="cart-mobile-header__desc-block" style="margin-bottom: 20px;">
 							<p>Вернитесь на главное меню что бы найти всё что нужно.</p>
 						</div>
+
+            <button class="cart-none__btn" @click="$router.push({name: 'home'})">
+              На главную
+            </button>
 					</div>
 
           <div class="cart-mobile-header__container" v-else>
@@ -136,7 +140,7 @@
                           </div>
                           <div class="cart-mobile-header__price">
                             <span class="cart-mobile-header__act-price">{{priceStyleS(dishe.price * shoppingCart[key])}}</span> ₸
-                            <div v-if="dishe.old_price > 0" style="text-decoration: line-through; margin-top: 2.5px;}">
+                            <div v-if="dishe.old_price > 0" style="text-decoration: line-through; margin-top: 2.5px;">
                               <span class="cart-mobile-header__old-price">{{priceStyleS(dishe.old_price)}}</span> ₸
                             </div>
                           </div>
@@ -173,91 +177,6 @@
 </template>
 
 <style scoped>
-	.cart-mobile-header__img{
-		width: 64px;
-		height: 64px;
-	}
-
-	.cart-mobile-header__img-block{
-		margin-top: 20px;
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
-
-	.cart-mobile-header__desc-block{
-		font-weight: 400;
-		font-size: 16px;
-		text-align: center;
-		line-height: 140%;
-		padding: 0 15%;
-	}
-
-	.cart-mobile-header__title-block{
-		font-weight: 600;
-		font-size: 18px;
-		text-align: center;
-		margin: 20px 0 10px 0;
-	}
-
-  .client-modal__title-block{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    padding-bottom:  25px
-  }
-
-  .client-modal__title-close-button{
-    width: 22px;
-    height: 22px
-  }
-
-  .client-modal__title-block h2{
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  .client-modal__button{
-    margin-top: 20px;
-    border: none;
-    background-color: var(--cl_red);
-    color: var(--cl_white);
-    padding: 10px;
-    width: 35%;
-    border-radius: 12px;
-    font-size: 14px
-  }
-
-  .client-modal__desc-block{
-    font-size: 14px;
-    line-height: 140%;
-  }
-
-  .client-modal-block{
-    padding: 30px 25px;
-    position: fixed;
-    width: 325px;
-    padding: 30px 25px;
-    top: 25%;
-    left: 50%;
-    background-color: #fff;
-    z-index: 260;
-    transform: translate(-50%, 0%);
-    border-radius: 16px;
-  }
-
-  .client-mask{
-    position: fixed;
-    width: 100%;
-    height: 200%;
-    background-color: black;
-    opacity: 0.6;
-    z-index: 259;
-    transform: translate(0, -50%);
-  }
-
   /* Cart Desktop Animation */
 
   .cart-header {

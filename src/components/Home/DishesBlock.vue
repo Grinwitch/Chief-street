@@ -22,7 +22,8 @@
 				selectDishesId: 0,
 				dishesList: {},
 				selectionDisheId: 0,
-				lastSlideId: 0
+				lastSlideId: 0,
+				cartAnimeState: false,
 			}
 		},
 
@@ -85,6 +86,13 @@
 
 			toCart: function(id, count, inputState = false){
 				this.$store.dispatch('addToCart', {'id': id, 'count': count});
+
+				if (this.shoppingCart[id] === undefined || this.shoppingCart[id] === 1){
+					this.cartAnimeState = true;
+					setTimeout(() => {
+						this.cartAnimeState = false
+					}, 500)
+				}
 			},
 
 			closeModal: function(){
@@ -129,7 +137,7 @@
 
 			// Scroll to elem by ref
 			scrollToBottom(elem) {
-				this.selectionDisheId = parseInt(elem);
+				// this.selectionDisheId = parseInt(elem);
 				let st = this.$refs[elem];
 				if (st === undefined) return
 				if (st.length > 0)st = st[0];
@@ -184,7 +192,8 @@
 						</ul>
 					</div>
 
-					<div class="bottom-header-desc__block-right-icon-block">
+					<div v-bind:class="['bottom-header-desc__block-right-icon-block', {shake: cartAnimeState }]"
+							 @click="$router.push({name: 'cart'})">
 						<img src="@/assets/img/icons8-корзина-48.png" class="bottom-header-desc__block-right-icon">
 						<div class="bottom-header-desc__block-right-cart-count" v-if="Object.keys(shoppingCart).length > 0">
 							{{Object.keys(shoppingCart).length}}
@@ -280,7 +289,7 @@
 											<span v-if="shoppingCart[key] !== undefined"> • {{priceStyleS(dishe.price)}} ₸</span>
 										</div>
 										<div class="home-products__cart-descr">{{dishe.desc}}</div>
-										<div class="product-cart__price-old" v-if="dishe.old_price > 0">{{dishe.old_price}} тг.</div>
+										<!-- <div class="product-cart__price-old" v-if="dishe.old_price > 0">{{dishe.old_price}} тг.</div> -->
 									</div>
 									<div class="home-products__cart-footer">
 											<div class="product-cart__counter" v-if="shoppingCart[key] !== undefined">

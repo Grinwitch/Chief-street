@@ -68,24 +68,6 @@
     margin-bottom: 35px;
 	}
 
-	.cart-none__btn {
-		background: #ca1931;
-		margin: 0 auto;
-		display: block;
-		width: 200px;
-		padding: 10px;
-		border-radius: 30px;
-		transition: 0.6s;
-		border: 2px solid #ca1931;
-		color: #fff;
-		font-size: 16px;
-	}
-
-	.cart-none__btn:hover {
-		background: #fff;
-		color: #ca1931;
-	}
-
 	@media screen and (max-width: 600px) {
 		.cart-none__photo-mobile {
 			display: block;
