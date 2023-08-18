@@ -2,6 +2,7 @@
 	import { defineComponent } from "vue";
 	import Header from '@/components/Header.vue';
 	// import CartBlock from "@/components/Home/CartBlock.vue";
+	import InfoDesktop from '@/components/info_blocks/InfoDesktop.vue';
 </script>
 
 <script>
@@ -18,14 +19,20 @@
 		},
 		data(){
 			return{
-				compName: 'base'
+				compName: '',
+				modalInfoState: false
 			}
 		},
 		mounted(){
-			let path = window.location.pathname.replace('/', '');
-			this.compName = (path !== '') ? path : 'base';
+			// this.setCompName()
+			setTimeout(this.setCompName, 35);
 		},
 		methods:{
+			setCompName: function(){
+				let path = window.location.pathname.replace('/', '');
+				this.compName = (path !== '') ? path : 'base';
+			},
+
 			activeElem: function(name){
 				const index = name.indexOf(this.compName);
 				return (index > -1) ? '' : 'mobile-bottom-menu__icon-block-non-act';
@@ -46,13 +53,18 @@
 				<div class="container">
 					<div class="header__container">
 						<div class="header__left-block">
-							<div class="header__left-block-logo-block">
+							<div class="header__left-block-logo-block" @click="$router.push({name: 'home'})">
 								<img src="@/assets/img/44fsf3cseyg3dhqk7w2zbpuc09x1kba3.svg" class="header__left-block-logo">
 							</div>
 
 							<div class="header__left-block-info-block">
 								<img src="@/assets/img/svgexport-1.svg" class="header__left-block-info-block-img">
-								<p class="header__left-block-info-block-text">Информация</p>
+								<p class="header__left-block-info-block-text" @click="modalInfoState = !modalInfoState">Информация</p>
+								<Transition>
+									<div class="info-modal" v-if="modalInfoState">
+										<InfoDesktop/>
+									</div>
+								</Transition>
 							</div>
 						</div>
 
@@ -61,7 +73,7 @@
 								<p class="header__right-phone-number-text">+7 (999) 375-59-72</p>
 							</div>
 
-							<div class="header__right-background-change-button-block">
+							<!-- <div class="header__right-background-change-button-block">
 								<div>
 		  							<input type="checkbox" class="checkbox" id="checkbox12">
 		  							<label for="checkbox12" class="checkbox-label">
@@ -70,9 +82,10 @@
 		    							<span class="ball"></span>
 		  							</label>
 								</div>
-							</div>
+							</div> -->
+							
 
-							<div class="header__right-auth-button">
+							<div class="header__right-auth-button" @click="$router.push({name: 'profile'})">
 								<img src="@/assets/img/svgexport-3.svg" class="header__right-auth-button-img">
 								<p class="header__right-auth-button-text">Войти</p>
 							</div>
@@ -89,7 +102,7 @@
 								Chief Street Food
 							</div>
 							<div class="mobile-header__info-block">
-								<div class="header__right-background-change-button-block">
+								<!-- <div class="header__right-background-change-button-block">
 									<div>
 		  								<input type="checkbox" class="checkbox" id="checkbox">
 		  								<label for="checkbox" class="checkbox-label">
@@ -98,7 +111,7 @@
 		    								<span class="ball"></span>
 		  								</label>
 									</div>
-								</div>
+								</div> -->
 							</div>
 
 						</div>
@@ -124,8 +137,8 @@
 					<p class="mobile-bottom-menu__item-name">Акции</p>
 				</div>
 
-				<div style="position: relative;" @click="$router.push({name: 'cart'})">
-					<div v-bind:class="['mobile-bottom-menu__icon-block', activeElem(['cart', 'checkout'])]" >
+				<div style="position: relative; width: 18%" @click="$router.push({name: 'cart'})">
+					<div v-bind:class="['mobile-bottom-menu__icon-block', activeElem(['cart', 'checkout'])]" style="width: 100%;">
 						<img src="@/assets/img/icons8-корзина-48.png" class="mobile-bottom-menu__icon">
 						<p class="mobile-bottom-menu__item-name">Корзина</p>
 					</div>

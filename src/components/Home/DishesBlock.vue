@@ -22,20 +22,37 @@
 				selectDishesId: 0,
 				dishesList: {},
 				selectionDisheId: 0,
-				lastSlideId: 0
+				lastSlideId: 0,
+				cartAnimeState: false,
+				modalMenuState: false,
+				viewCount: 8
 			}
 		},
 
 		mounted(){
 			setTimeout(this.fakeRequest, 1000);
 
+			addEventListener("resize", (event) => {
+				console.log(event.target.innerWidth);
+				let monitorWidth = event.target.innerWidth
+				
+				if (monitorWidth > 1200 ) this.viewCount = 8;
+				else if (monitorWidth <= 1200 && monitorWidth > 1000) this.viewCount = 7;
+				else if (monitorWidth <= 1200 && monitorWidth >= 1000) this.viewCount = 5;
+				else if (monitorWidth <= 1000 &&monitorWidth >= 710) this.viewCount = 4;
+					
+			});
+
 			addEventListener("scroll", (event) => {
-				let top = 0, left = 0;
+				let top = 0, left = 0, id = 0;
 				let el = null, rect = null, win = null;
 				let scrollY = window.scrollY, elemY = 0, elemHeight = 0;
 				let mobileUl = document.querySelector('.bottom-header__carousel-list');
 
 				Object.keys(this.dishesList).concat([0]).forEach((elem) => {
+					id = parseInt(elem);
+					elem = `${elem}__nav`;
+
 					if (this.$refs[elem] !== undefined && this.$refs[elem] !== null){
 						el = this.$refs[elem];
 						if (el.length > 0) el = el[0]
@@ -45,23 +62,23 @@
 							rect = el.getBoundingClientRect();
 							win = el.ownerDocument.defaultView;
 
-							top = percentCalculate(rect.top + win.pageYOffset, 10);
+							top = percentCalculate(rect.top + win.pageYOffset, 4);
 							left = rect.left + win.pageXOffset;
 
-							if (scrollY > top && percentCalculate(top + elemHeight, 10) > scrollY){
-								this.selectionDisheId = parseInt(elem);
+							if (scrollY > top && percentCalculate(top + elemHeight, 0) > scrollY){
+								this.selectionDisheId = id;
 								this.activeState = true;
 
 								if (this.lastSlideId !== this.selectionDisheId)
 									setTimeout(() => {
-											mobileUl.scroll({top: 0, left: parseInt(elem) * 100, behavior: "smooth"});
+											mobileUl.scroll({top: 0, left: parseInt(elem) * 89, behavior: "smooth"});
 											this.lastSlideId = parseInt(elem);
 									}, 350)
-
 
 								return
 							}
 						}catch{
+
 							return
 						}
 					}
@@ -85,6 +102,13 @@
 
 			toCart: function(id, count, inputState = false){
 				this.$store.dispatch('addToCart', {'id': id, 'count': count});
+
+				if (this.shoppingCart[id] === undefined || this.shoppingCart[id] === 1){
+					this.cartAnimeState = true;
+					setTimeout(() => {
+						this.cartAnimeState = false
+					}, 500)
+				}
 			},
 
 			closeModal: function(){
@@ -116,7 +140,7 @@
 			},
 
 			modalDishes: function(id){
-				document.querySelector('body').style.overflow = "hidden";
+				// document.querySelector('body').style.overflow = "hidden";
 				this.selectDishesId = parseInt(id);
 
 				for (const [dishesListKey, dishe] of Object.entries(this.dishes)){
@@ -129,11 +153,10 @@
 
 			// Scroll to elem by ref
 			scrollToBottom(elem) {
-				this.selectionDisheId = parseInt(elem);
 				let st = this.$refs[elem];
 				if (st === undefined) return
 				if (st.length > 0)st = st[0];
-				st.scrollIntoView({ behavior: "smooth" })
+				st.scrollIntoView({top: 50, behavior: "smooth" })
 			},
 
 			// Add or remove favorite product
@@ -171,25 +194,50 @@
 									<li v-bind:class="['bottom-header-desc__block-left-ul-item', bottomHeaderActive(0)]"
 											ref="0_nav"
 											v-if="Object.keys(favoriteLists).length > 0"
-											@click="scrollToBottom('0')">Избранные
+											@click="scrollToBottom('0__nav')">Избранные
 									</li>
 								</Transition>
 
 							<li v-bind:class="['bottom-header-desc__block-left-ul-item', bottomHeaderActive(key)]"
-									v-for="dishesI, key in dishesList" v-bind:key="key"
-									@click="scrollToBottom(key)">
-								{{dishesI}}
+									v-for="key in Object.keys(dishesList).slice(0, viewCount)" v-bind:key="key"
+									@click="scrollToBottom(`${key}__nav`)">
+								{{dishesList[key]}}
 							</li>
 
 						</ul>
-					</div>
 
-					<div class="bottom-header-desc__block-right-icon-block">
+						<!-- More Button -->
+
+						<span class='bottom-header-desc__block-left-ul-item' @click="modalMenuState = !modalMenuState">
+								Ещё
+							</span>
+
+						<!-- More Button end -->
+
+						<!-- More Menu Modal -->
+
+						<Transition>
+							<div class="bottom-header-desc__block-more-menu" v-if="modalMenuState">
+								<ul class="bottom-header-desc__block-more-menu-list">
+									<li v-bind:class="['bottom-header-desc__block-left-ul-item', bottomHeaderActive(key)]"
+											v-for="key in Object.keys(dishesList).slice(viewCount)" v-bind:key="key"
+											@click="scrollToBottom(`${key}__nav`)">
+										{{dishesList[key]}}
+									</li>
+								</ul>
+							</div>
+						</Transition>
+					</div>
+					<!-- More Menu Modal end -->
+
+					<div v-bind:class="['bottom-header-desc__block-right-icon-block', {shake: cartAnimeState }]"
+							 @click="$router.push({name: 'cart'})">
 						<img src="@/assets/img/icons8-корзина-48.png" class="bottom-header-desc__block-right-icon">
 						<div class="bottom-header-desc__block-right-cart-count" v-if="Object.keys(shoppingCart).length > 0">
 							{{Object.keys(shoppingCart).length}}
 						</div>
 					</div>
+
 
 
 				</div>
@@ -212,7 +260,7 @@
 											<Transition>
 												<li v-bind:class="['bottom-header__dishes-block-link', bottomHeaderActive(0)]"
 														v-if="Object.keys(favoriteLists).length > 0"
-														@click="scrollToBottom('0')">
+														@click="scrollToBottom('0__nav')">
 														Избранные
 												</li>
 											</Transition>
@@ -221,7 +269,7 @@
 													:ref="`${key}_hd`"
 													v-for="dishesI, key in dishesList"
 													v-bind:key="key"
-													@click="scrollToBottom(key)">
+													@click="scrollToBottom(`${key}__nav`)">
 												{{dishesI}}
 											</li>
 										</ul>
@@ -240,7 +288,7 @@
 
 		<div class="container">
 			<Transition>
-				<section class="home-products" v-if="Object.keys(favoriteLists).length > 0" :ref="0">
+				<section class="home-products" v-if="Object.keys(favoriteLists).length > 0" :ref="`${0}__nav`">
 					<div class="home-products__content">
 						<h2 class="home-products__title" >Избранные</h2>
 						<div class="home-products__carts">
@@ -280,7 +328,7 @@
 											<span v-if="shoppingCart[key] !== undefined"> • {{priceStyleS(dishe.price)}} ₸</span>
 										</div>
 										<div class="home-products__cart-descr">{{dishe.desc}}</div>
-										<div class="product-cart__price-old" v-if="dishe.old_price > 0">{{dishe.old_price}} тг.</div>
+										<!-- <div class="product-cart__price-old" v-if="dishe.old_price > 0">{{dishe.old_price}} тг.</div> -->
 									</div>
 									<div class="home-products__cart-footer">
 											<div class="product-cart__counter" v-if="shoppingCart[key] !== undefined">
@@ -306,7 +354,7 @@
 				</section>
 			</Transition>
 
-			<section class="home-products" v-for="disheKey in Object.keys(dishes)" v-bind:key="disheKey" :ref="parseInt(disheKey)">
+			<section class="home-products" v-for="disheKey in Object.keys(dishes)" v-bind:key="disheKey" :ref="`${parseInt(disheKey)}__nav`">
 				<div class="home-products__content">
 					<h2 class="home-products__title">{{dishesList[disheKey]}}</h2>
 					<div class="home-products__carts">
