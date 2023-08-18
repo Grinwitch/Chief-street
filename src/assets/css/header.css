@@ -13,6 +13,9 @@
 	background-color: var(--cl_white);
 }
 
+.header__left-block-logo-block{
+	cursor: pointer;
+}
 
 .header__block{
 	width: 100%;
@@ -23,7 +26,7 @@
 .header{
 	position: sticky;
 	top: 0;
-	z-index: 100;
+	z-index: 250;
 	background-color: #fff;
 	    border-bottom: 1px solid rgba(177, 177, 177, 0.12);
 }
@@ -45,6 +48,49 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+	z-index: 239;
+}
+
+.bottom-header-desc__block-left-container {
+	display: flex;
+	width: calc(100% - 51px);
+	max-width: 935px;
+	position: relative;
+	z-index: 240;
+}
+
+.bottom-header-desc__block-left-ul-block {
+	overflow: hidden;
+	padding-bottom: 4px;
+}
+
+.bottom-header-desc__block-more-menu {
+	position: absolute;
+	right: -30px;
+	top: 55px;
+	background: var(--cl_white);
+	border-radius: 12px;
+	box-shadow: 1px 1px 5px #33333355;
+}
+
+.bottom-header-desc__block-more-menu-list {
+	padding: 5px 10px;
+}
+
+.bottom-header-desc__block-left-ul-block::-webkit-scrollbar {
+	height: 5px;
+	border-radius: 5px;
+	background: #fff;
+	border: 0;
+}
+
+.bottom-header-desc__block-left-ul-block::-webkit-scrollbar-thumb {
+	background: #eee;
+	border-radius: 5px;
+}
+
+.bottom-header-desc__block-left-ul-block::-webkit-scrollbar-button {
+	display: none;
 }
 
 .bottom-header-desc__block-left-ul-block{
@@ -139,6 +185,7 @@
 	font-size: 16px;
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 
 .header__left-block-info-block-text{
@@ -339,8 +386,8 @@
 	position: fixed;
 	width: 100%;
 	background-color: var(--cl_white);
-	padding: 10px 20px 30px 20px;
-	z-index: 240;
+	padding: 10px 10px 15px 10px;
+	z-index: 241;
 	border-top: 1px solid rgba(177, 177, 177, 0.12);
 }
 
@@ -360,6 +407,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 18%;
+	justify-content: space-between;
 }
 
 .mobile-bottom-menu__icon-block-non-act{
@@ -438,4 +487,15 @@
 	width: 22px;
 	height: 22px;
 	opacity: 0.5;
+}
+
+.info-modal {
+	width: 250px;
+	position: absolute;
+	top: 50px;
+	right: -55px;
+	z-index: 270;
+	background: var(--cl_white);
+	border-radius: 12px;
+	box-shadow: 1px 1px 5px #33333355;
 }

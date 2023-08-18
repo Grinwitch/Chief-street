@@ -3,9 +3,31 @@
   padding-bottom: 2%;
 }
 
+.check-out{
+  position: relative;
+}
+
+.check-out__preloader-block{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  z-index: 100;
+  /* display: none; */
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.check-out__preloader-container{
+  width: 80px;
+  height: 80px;
+}
+
 .checkout__content {
   width: 100%;
-  padding: 0 15px;
+  padding: 30px 15px 60px;
 }
 
 .checkout-content__title {
@@ -80,6 +102,24 @@
   position: relative;
 }
 
+.checkout-content__item-pickup-list {
+  width: 100%;
+/*  box-shadow: 1px 1px 10px #33333355;*/
+  border-radius: 0 0 12px 12px;
+  background: var(--cl_white);
+  position: absolute;
+  left: 0;
+  top: 42px;
+  z-index: 250;
+  border: 1px solid #33333355;
+}
+
+.checkout-contnet__item-pickup-point {
+  padding: 10px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
 .checkout-content__item-pickup-input {
   width: 100%;
   border-radius: 12px;
@@ -95,6 +135,7 @@
   position: relative;
   cursor: pointer;
   touch-action: auto;
+  height: 88px;
 }
 
 .radiobutton-input {
@@ -192,6 +233,11 @@
 
 .checkout-content__info-block-bottom {
   padding: 15px 0;
+  font-size: 13px;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
 }
 
 .checkout-content__info-block-faq {
@@ -200,8 +246,8 @@
   border: 1px solid var(--cl_black);
   border-radius: 50%;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
   transition: .3s ease-out;
   z-index: 10;
@@ -331,6 +377,21 @@
 
 /* Active button end */
 
+
+/* Disabled button */
+
+.checkout-disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+}
+
+.checkout-disabled .checkout-content__info-block-top {
+  cursor: not-allowed;
+}
+
+/* Disabled button end */
+
 .checkout-address__icon {
   margin-left: 10px;
   position: absolute;
@@ -408,15 +469,26 @@
 .checkout-input,
 .checkout-content__item-pickup-input {
   width: 100%;
-  border-radius: 12px;
-  border: 1px solid #33333355;
   padding: 10px 15px;
   font-size: 16px;
 }
 
-.checkout-label__pickup, 
-.checkout-content__item-descr-textarea, 
-.checkout-label__descr, 
+
+.checkout-input,
+.checkout-content__item-pickup-input-non-act{
+  border-radius: 12px;
+  border: 1px solid #33333355;
+}
+
+.checkout-content__item-pickup-input-act{
+  border: 1px solid #33333355;
+  border-radius: 12px 12px 0 0;
+}
+
+
+.checkout-label__pickup,
+.checkout-content__item-descr-textarea,
+.checkout-label__descr,
 .checkout-content__item-pickup-input,
 .checkout-label__name,
 .checkout-label__phone,
@@ -444,6 +516,18 @@
   left: 35px;
   cursor: default;
   color: var(--cl_red);
+}
+
+.lab_active{
+  cursor: default;
+  position: absolute;
+  top: -5px;
+  left: 35px;
+  font-size: 13px;
+  color: #888888;
+  background-color: var(--cl_white);
+  padding: 0 2px;
+  cursor: text;
 }
 
 .checkout-content__item-left-descr {
@@ -514,4 +598,12 @@
     margin-bottom: 15px;
   }
 
+}
+
+.checkout-contnet__item-pickup-point:hover{
+  color: var(--cl_red);
+}
+
+.checkout-content__item-quantity-count{
+  cursor: pointer;
 }

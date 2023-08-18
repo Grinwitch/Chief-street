@@ -31,8 +31,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 100%;
   width: 100%;
+  position: fixed;
+  background-color: #eee;
+  z-index: 240;
 }
 
 .home-slider_container{
@@ -136,6 +139,8 @@ body{
   font-weight: 300;
   cursor: pointer;
   line-height: 140%;
+
+  transition: all .3s;
 }
 
 .tab-current{
@@ -248,4 +253,58 @@ body{
 
 .main{
   margin-bottom: 100px;
+}
+
+  .cart-none__btn {
+    background: #ca1931;
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border-radius: 30px;
+    transition: 0.6s;
+    border: 2px solid #ca1931;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .cart-none__btn:hover {
+    background: #fff;
+    color: #ca1931;
+  }
+
+.page-header__breadcrumbs {
+  display: flex;
+  margin-bottom: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.page-header__breadcrumb-main {
+  color: var(--cl_red);
+  cursor: pointer;
+}
+
+.page-header__breadcrumb-separator {
+  margin: 0 10px;
+}
+
+.page-header__top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.page-header__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-desktop,
+.tracking__content {
+  padding: 30px 0 60px;
+  min-height: 70vh;
 }

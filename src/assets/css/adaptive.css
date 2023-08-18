@@ -7,6 +7,20 @@
 
 
 @media screen and (max-width: 992px) {
+	.m-modal-product__cart_icon{
+		width: 12px;
+	}
+
+	.cart-header__item .m-modal-product__cart_minus,
+	.cart-header__item .m-modal-product__cart_plus{
+		width: 30px;
+    padding: 10px 15px;
+	}
+
+	.m-modal-product__cart_value{
+		padding: 15px 10px;
+	}
+
 	.container{
 		max-width: 720px;
 	}
@@ -41,6 +55,7 @@
   		color: #292c35;
 	}
 
+	.info-desktop-section,
 	.bottom-header-desc,
 	.home-products__cart-img-zoom,
 	.header__left-block-info-block-text,
@@ -228,6 +243,7 @@
 	.home__about-navigation-nva-item {
 		padding: 10px 5px;
 		font-size: 14px;
+		transition: all .3s;
 	}
 
 	.header__left-block-logo{
@@ -549,7 +565,7 @@
 		position: fixed;
     left: 0;
     bottom: 0;
-    transform: translateY(-80%);
+    transform: translateY(-66%);
 	}
 
 	.cart-mobile-header__promotion {
@@ -591,7 +607,6 @@
 	  display: block;
 	  margin: 0 auto;
 	  border-radius: 10px;
-	  /* background-color: #007544; */
 	  border: none;
 	  font-size: 16px;
 	  font-weight: 300;
@@ -602,7 +617,7 @@
 	  text-align: center;
 	  cursor: pointer;
 	  padding: 4px 20px;
-	  background-color: #ea5f63;
+	  background-color: #17802e;
 	  transition: 0.3s;
 	  width: 100%;
 	  display: flex;
@@ -675,18 +690,18 @@
 		padding-bottom: 27%;
 	}
 
-	.tracking-top-point {
+	.tracking-top__content-point-info {
+		flex-wrap: wrap;
+	}
+
+	.tracking-top__content-block-point {
 		width: 25%;
-		display: flex;
-		align-items: center;
 	}
 
 	.tracking-top__content-point-payment-status {
-		flex-wrap: wrap;
+		width: 75%;
 	}
-}
 
-@media screen and (max-width: 435px) {
 	.tracking-top__content-point-payment-status-link {
 		margin-top: 5px;
 	}

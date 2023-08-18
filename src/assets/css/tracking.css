@@ -1,6 +1,5 @@
 .tracking {
     width: 100%;
-    padding: 120px 0;
 }
 
 .tracking__content {
@@ -35,6 +34,7 @@
 
 .tracking-center__content-block {
     background: #fce389;
+    line-height: 140%;
 }
 
 .tracking-center__content-block strong{
@@ -56,10 +56,19 @@
 }
 
 .tracking-top__content-block-points li {
+    font-size: 14px;
     display: flex;
     align-items: center;
-    width: 100%;
-    font-size: 14px;
+}
+
+.tracking-top__content-block-point {
+    width: 120px;
+    font-weight: 600;
+}
+
+.tracking-top__content-point-info {
+    display: flex;
+    align-items: center;
 }
 
 .tracking-top__content-block-points li:not(:last-child),
@@ -78,16 +87,6 @@
 .tracking-top__content-point-info,
 .tracking-center__content-block {
     font-size: 14px;
-}
-
-.tracking-top__content-point-payment-status {
-    display: flex;
-    align-items: center;
-}
-
-.tracking-top-point {
-    font-weight: 600;
-    width: 125px;
 }
 
 /* Payment Status */
