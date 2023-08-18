@@ -12,16 +12,22 @@ import './assets/css/adaptive.css';
 import './assets/css/transition.css';
 
 import { createApp } from 'vue'
+import YmapPlugin from 'vue-yandex-maps'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 // import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { settings } from './util/utils.js'
 
 const app = createApp(App)
 
 // app.use(createPinia())
 app.use(router)
 app.use(store)
+app.use(YmapPlugin, settings)
+app.use(VueAxios, axios)
 
 app.mount('#app')
