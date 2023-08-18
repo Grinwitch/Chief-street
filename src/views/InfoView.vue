@@ -1,6 +1,6 @@
 <script setup>
   import { defineComponent } from 'vue';
-  import InfoMobile from '@/components/info_blocks/InfoMobile.vue'
+  import InfoMobile from '@/components/info_blocks/InfoMobile.vue';
 </script>
 
 <script>
@@ -10,7 +10,8 @@
 </script>
 
 <template>
-  <div>
+
+  <section class="info-mobile-section">
     <InfoMobile/>
-  </div>
+  </section>
 </template>

@@ -24,6 +24,7 @@
 		width: 100%;
 		height: 100%;
 		position: fixed;
+		min-height: 80vh;
 	}
 
 	.cart-none__container {
@@ -66,24 +67,6 @@
     margin-top: 15px;
     line-height: 140%;
     margin-bottom: 35px;
-	}
-
-	.cart-none__btn {
-		background: #ca1931;
-		margin: 0 auto;
-		display: block;
-		width: 200px;
-		padding: 10px;
-		border-radius: 30px;
-		transition: 0.6s;
-		border: 2px solid #ca1931;
-		color: #fff;
-		font-size: 16px;
-	}
-
-	.cart-none__btn:hover {
-		background: #fff;
-		color: #ca1931;
 	}
 
 	@media screen and (max-width: 600px) {
