@@ -30,9 +30,9 @@
                 <li>
                   <div class="tracking-top__content-block-point">Статус оплаты:</div>
                   <div class="tracking-top__content-point-payment-status tracking-top__content-point-info">
-                    <span class="tracking-top__content-point-payment-status-overdue">Просрочено</span>
+<!--                    <span class="tracking-top__content-point-payment-status-overdue">Просрочено</span>-->
                     <span class="tracking-top__content-point-payment-status-await" style="margin-left: 10px;">Ожидается оплата</span>
-                    <span class="tracking-top__content-point-payment-status-confirmed" style="margin-left: 10px;">Оплачено</span>
+<!--                    <span class="tracking-top__content-point-payment-status-confirmed" style="margin-left: 10px;">Оплачено</span>-->
                     <a class="tracking-top__content-point-payment-status-link tracking-top__content-point-info">
                       Оплатить
                     </a>
