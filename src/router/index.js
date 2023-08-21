@@ -5,6 +5,8 @@ import CheckOut from '@/views/CheckOut.vue';
 import InfoView from '@/views/InfoView.vue';
 import CartNone from '@/views/CartNone.vue';
 import OrderTracking from '@/views/OrderTracking.vue';
+import TextPage from '@/views/TextPage.vue';
+import ErrorPage from '@/views/ErrorPage.vue';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -46,6 +48,16 @@ const router = createRouter({
 			path: '/tracking',
 			name: 'tracking',
 			component: OrderTracking
+		},
+		{
+			path: '/textpage',
+			name: 'textpage',
+			component: TextPage
+		},
+		{
+			path: '/404',
+			name: '404',
+			component: ErrorPage
 		}
 		// {
 		//   path: '/about',

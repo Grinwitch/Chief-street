@@ -58,6 +58,39 @@
 			setTimeout(this.fakeReqState, 1000);
 		},
 		methods:{
+			stepChange: function(step, state){
+				if(step === 1){
+					this.secondBlockState = true;
+
+					if (state){
+						this.mapState = true;
+						this.secondBlockState = true
+						return this.checkOutData.adrIndicateState = true;
+					}
+
+					this.secondBlockState = true
+					this.checkOutData.adrIndicateState = false;
+				}
+
+				else if (step == 2 && this.secondBlockState){
+					this.thirdBlockState = true;
+
+					if (state){
+						this.checkOutData.deliveryState = true;
+						this.thirdBlockState = true;
+						return
+					}
+
+					this.pickupMapState = true;
+					this.thirdBlockState = true;
+					this.checkOutData.deliveryState = false;
+				}
+
+				else if (step == 3 && this.thirdBlockState){
+					(state) ? this.checkOutData.paydType = 'kaspi' : this.checkOutData.paydType = 'card';
+				}
+			},
+
 			clientNumValidation: function(num, oldValue){
 				let result = '+7 7';
 				let loc_num = num.slice(4, 16)
@@ -216,7 +249,7 @@
 										<div class="checkout-content__item-left-info">
 											<div v-bind:class="['checkout-content__info-block',
 																						(checkOutData.adrIndicateState) ? 'checkout-content__item-active' : '']"
-															@click="mapState = true; checkOutData.adrIndicateState = true; secondBlockState = true">
+															@click="stepChange(1, true)">
 
 												<label for="address1" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
@@ -235,7 +268,7 @@
 
 											<div v-bind:class="['checkout-content__info-block',
 																						(checkOutData.adrIndicateState === false) ? 'checkout-content__item-active' : '']"
-															@click="checkOutData.adrIndicateState = false; secondBlockState = true">
+															@click="stepChange(1, false);">
 												<label for="address2" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
 													<input type="radio" name="cart-address__type" class="modal-card__list-input radiobutton-input" id="address2" value="address">
@@ -282,7 +315,7 @@
 											<div v-bind:class="['checkout-content__info-block',
 																					(!secondBlockState) ? 'checkout-disabled' : '',
 																					(checkOutData.deliveryState) ? 'checkout-content__item-active' : '']"
-															@click="checkOutData.deliveryState = true; thirdBlockState = true">
+															@click="stepChange(2, true)">
 
 												<label for="deliver1" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
@@ -298,7 +331,7 @@
 											<div v-bind:class="['checkout-content__info-block',
 																				 (!secondBlockState) ? 'checkout-disabled' : '',
 																				 (checkOutData.deliveryState === false) ? 'checkout-content__item-active' : '']"
-															@click="pickupMapState = true; checkOutData.deliveryState = false; thirdBlockState = true">
+															@click="stepChange(2, false);">
 
 												<label for="deliver2" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
@@ -327,7 +360,7 @@
 																					(!thirdBlockState) ? 'checkout-disabled' : '',
 																					(checkOutData.paydType === 'kaspi') ? 'checkout-content__item-active' : '']"
 
-													 @click="checkOutData.paydType = 'kaspi'">
+													 @click="stepChange(3, true)">
 												<label for="payment1" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
 													<input type="radio" name="cart-payment__type" class="modal-card__list-input radiobutton-input" id="payment1" value="payment">
@@ -342,7 +375,7 @@
 											<div v-bind:class="['checkout-content__info-block',
 																					(!thirdBlockState) ? 'checkout-disabled' : '',
 																					(checkOutData.paydType === 'card') ? 'checkout-content__item-active' : '']"
-															@click="checkOutData.paydType = 'card'">
+															@click="stepChange(3, false)">
 												<label for="payment2" class="checkout-content__info-block-top">
 													<div class="checkout-address__indicator"></div>
 													<input type="radio" name="cart-payment__type" class="modal-card__list-input radiobutton-input" id="payment2" value="payment">

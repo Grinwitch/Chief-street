@@ -9,7 +9,7 @@ export const fakePoints = {1: {"title": "Ресторан №1", "location": "у
 // All Dishes
 export const allDishes = {
 	// id
-	1: {"title": "Биг Бургер", // Product Titile
+	1: {"title": "Биг Бургер", // Product Title
 		// Product Under Tile
 		"under_title": "200 г",
 		// Product Description
@@ -19,9 +19,9 @@ export const allDishes = {
 		// Product Old Price
 		"old_price": "",
 		// Product Image URL
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		// Stickers
-		"stickers": {"hit": true, "new": false, "promo": false, "discount": 10}
+		"stickers": {"hit": true, "new": false, "promo": false, "discount": 0}
 	},
 
 	2: {"title": "Чизбургер",
@@ -29,8 +29,8 @@ export const allDishes = {
 		"desc": "Котлета из говядины, ломтик сыра, помидор, соленые огурцы, лист салата, томленый лук, 3 вида соуса",
 		"price": 1565,
 		"old_price": 1700,
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 10}
 	},
 
 	3: {"title": "Монстр Бургер",
@@ -38,8 +38,8 @@ export const allDishes = {
 		"desc": "Тройная котлета из говядины, лист салата, соленые огурцы, кукуруза, халапеньо, лук шалот, 3  ломтика сыра, 3 вида соуса",
 		"price": 2165,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	4: {"title": "Чикен стрипс бургер",
@@ -47,32 +47,32 @@ export const allDishes = {
 		"desc": "Куриное филе, лист салата, помидор, соленые огурцы, луковые кольца, 3 вида соуса",
 		"price": 1510,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 	5: {"title": "Гамбургер",
 		"under_title": "200 г",
 		"desc": "Куриная котлета, ломтик сыра, помидор, соленые огурцы, лист салата, 3 вида соуса",
 		"price": 1400,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 50}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 	6: {"title": "Дабл гамбургер",
 		"under_title": "200 г",
 		"desc": `Двойная куриная котлета, лист салата, помидор, соленые огурцы, 2 ломтика сыра, 3 вида соуса`,
 		"price": 7000,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 50}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 	7: {"title": "Техас бургер",
 		"under_title": "200 г",
 		"desc": `Котлета из говядины, копченная говядина, лист салата, соленые огурцы, лук шалот, фри, 3 вида соуса`,
 		"price": 700,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 50}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": true, "new": false, "promo": false, "discount": 0}
 	},
 
 	8: {"title": "Картофельные дольки",
@@ -80,8 +80,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 565,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": true, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": true, "new": false, "promo": false, "discount": 0}
 	},
 
 	9: {"title": "Куринные наггетсы",
@@ -89,7 +89,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 970,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -98,8 +98,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 565,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	11: {"title": "Картофельные шарики",
@@ -107,8 +107,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 565,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	12: {"title": "Сырные палочки",
@@ -116,8 +116,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 860,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	13: {"title": "Креветки",
@@ -125,7 +125,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2650,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
 	},
 
@@ -134,8 +134,8 @@ export const allDishes = {
 		"desc": `Фри, лук шалот, халапеньо, помидор,  тостер и 2 вида соуса`,
 		"price": 2110,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	15: {"title": "Колбаски куриные",
@@ -143,8 +143,8 @@ export const allDishes = {
 		"desc": `Фри, лук шалот, халапеньо, помидор, тостер и 2 вида соуса`,
 		"price": 2110,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	16: {"title": "Ачук-чучук",
@@ -152,8 +152,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1250,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	17: {"title": "Греческий",
@@ -161,8 +161,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1650,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	18: {"title": "Цезарь с креветками",
@@ -170,8 +170,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 3300,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	19: {"title": "Цезарь с курицей",
@@ -179,8 +179,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2650,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	20: {"title": "Мясная пицца",
@@ -188,8 +188,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2990,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	21: {"title": "Пепперони",
@@ -197,8 +197,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2705,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	22: {"title": "Буффало",
@@ -206,8 +206,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2760,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	23: {"title": "Болоньезе",
@@ -215,8 +215,8 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2875,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
-		"stickers": {"hit": false, "new": true, "promo": false, "discount": 0}
+		"img": "http://test.street-food.kz/assets/tray.png",
+		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
 	24: {"title": "Ветчина с грибами",
@@ -224,7 +224,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2990,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -233,7 +233,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2530,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": true, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -242,7 +242,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2875,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -251,7 +251,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1725,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -260,7 +260,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 3680,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -269,7 +269,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 2730,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -278,7 +278,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 3300,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -287,7 +287,7 @@ export const allDishes = {
 		"desc": `Куриное филе в кисло сладком соусе`,
 		"price": 2250,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -296,7 +296,7 @@ export const allDishes = {
 		"desc": `Колбаски куриные, колбаски говяжьи, чикен крылышки, чикен голень, картофельные шарики,  кебаб, луковые кольца, креветки в кляре, картофельные дольки, тостер, помидоры, лист салата и лимон, 3 вида соуса`,
 		"price": 9200,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -305,7 +305,7 @@ export const allDishes = {
 		"desc": `Колбаски куриные, колбаски говяжьи, чикен крылышки, чикен голень, картофельные шарики,  кебаб, луковые кольца, картофельные дольки, тостер, помидоры, лист салата и лимон, 3 вида соуса`,
 		"price": 8650,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -314,7 +314,7 @@ export const allDishes = {
 		"desc": `Филе в кляре, помидор, ломтик сыра, листья салата, лук шалот, 2 вида соуса`,
 		"price": 1370,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -323,7 +323,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1475,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -332,7 +332,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1795,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -341,7 +341,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1220,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -350,7 +350,7 @@ export const allDishes = {
 		"desc": `Копченая говядина, телячья вырезка, лук шалот, халапеньо, ломтик сыра и соус`,
 		"price": 1705,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -359,7 +359,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1705,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -368,7 +368,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 4830,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -377,7 +377,7 @@ export const allDishes = {
 		"desc": `2 сосиски, лист салата, фасоль, лук томленый, 3 вида соуса`,
 		"price": 1315,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -386,7 +386,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1130,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -395,7 +395,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 1130,
 		"old_price": "",
-		"img": "src/assets/img/tray.png",
+		"img": "http://test.street-food.kz/assets/tray.png",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -404,7 +404,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 230,
 		"old_price": "",
-		"img": "src/assets/img/barbeku.jpg",
+		"img": "http://test.street-food.kz/assets/barbeku.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -413,7 +413,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 230,
 		"old_price": "",
-		"img": "src/assets/img/cheese.jpg",
+		"img": "http://test.street-food.kz/assets/cheese.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -422,7 +422,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 230,
 		"old_price": "",
-		"img": "src/assets/img/sasabeli.jpg",
+		"img": "http://test.street-food.kz/assets/sasabeli.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -431,7 +431,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 290,
 		"old_price": "",
-		"img": "src/assets/img/halap.jpg",
+		"img": "http://test.street-food.kz/assets/halap.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -440,7 +440,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 230,
 		"old_price": "",
-		"img": "src/assets/img/chesnok.jpg",
+		"img": "http://test.street-food.kz/assets/chesnok.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -449,7 +449,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 170,
 		"old_price": "",
-		"img": "src/assets/img/ketchup.jpg",
+		"img": "http://test.street-food.kz/assets/ketchup.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -458,7 +458,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 170,
 		"old_price": "",
-		"img": "src/assets/img/chesnok.jpg",
+		"img": "http://test.street-food.kz/assets/chesnok.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -467,7 +467,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 350,
 		"old_price": "",
-		"img": "src/assets/img/airan.jpg",
+		"img": "http://test.street-food.kz/assets/airan.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -476,7 +476,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 405,
 		"old_price": "",
-		"img": "src/assets/img/bonaqua.jpg",
+		"img": "http://test.street-food.kz/assets/bonaqua.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -485,7 +485,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 530,
 		"old_price": "",
-		"img": "src/assets/img/dizzy.jpg",
+		"img": "http://test.street-food.kz/assets/dizzy.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -494,7 +494,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 460,
 		"old_price": "",
-		"img": "src/assets/img/cola-1.jpg",
+		"img": "http://test.street-food.kz/assets/cola-1.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -503,7 +503,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 575,
 		"old_price": "",
-		"img": "src/assets/img/cola-2.jpg",
+		"img": "http://test.street-food.kz/assets/cola-2.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -512,7 +512,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 200,
 		"old_price": "",
-		"img": "src/assets/img/airan.jpg",
+		"img": "http://test.street-food.kz/assets/airan.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -521,7 +521,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 575,
 		"old_price": "",
-		"img": "src/assets/img/gorilla.jpg",
+		"img": "http://test.street-food.kz/assets/gorilla.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -530,7 +530,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 460,
 		"old_price": "",
-		"img": "src/assets/img/lipton.jpg",
+		"img": "http://test.street-food.kz/assets/lipton.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 
@@ -539,7 +539,7 @@ export const allDishes = {
 		"desc": ``,
 		"price": 575,
 		"old_price": "",
-		"img": "src/assets/img/fuse.jpg",
+		"img": "http://test.street-food.kz/assets/fuse.jpg",
 		"stickers": {"hit": false, "new": false, "promo": false, "discount": 0}
 	},
 }

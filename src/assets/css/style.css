@@ -20,6 +20,7 @@
 
 body{
   background-color: #eee;
+  /* overflow-x: hidden; */
 }
 
 .mobile-cart__preloader-container{
@@ -304,7 +305,8 @@ body{
 }
 
 .cart-desktop,
-.tracking__content {
+.tracking__content,
+.text-page__content{
   padding: 30px 0 60px;
   min-height: 70vh;
 }

@@ -1,0 +1,45 @@
+.error-page {
+    position: relative;
+    min-height: 70vh;
+}
+
+.error-page__content {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.error-page-content__title {
+    color: var(--cl_red);
+    font-weight: 800;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.error-page-content__descr {
+    margin-top: 25px;
+    line-height: 140%;
+}
+
+.error-page__btn {
+    background: #ca1931;
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border-radius: 30px;
+    transition: 0.6s;
+    border: 2px solid #ca1931;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.error-page__btn:hover {
+    background: #fff;
+    color: #ca1931;
+}

@@ -70,6 +70,12 @@
 .info-desktop__body-item-block{
   display: flex;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: all .05s;
+}
+
+.info-desktop__body-item-block:hover{
+  color: var(--cl_red);
 }
 
 .info-desktop__body-item-container-additionally-block{
@@ -94,7 +100,7 @@
 
 .info-desktop__body-item-container{
   width: 100%;
-  padding: 20px 15px;
+  padding: 15px 15px;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -102,6 +108,7 @@
   border-radius: 16px;
   font-weight: 600;
   font-size: 17px;
+  line-height: 140%;
 }
 
 .info-desktop__body-block{

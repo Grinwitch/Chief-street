@@ -1,0 +1,10 @@
+.text-page-content__descr {
+    line-height: 140%;
+    color: var(--cl_black);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.text-page-content__descr:not(:last-child) {
+    margin-bottom: 20px;
+}
