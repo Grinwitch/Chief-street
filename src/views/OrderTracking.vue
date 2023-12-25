@@ -1,6 +1,24 @@
 <script setup>
-  import { defineComponent } from 'vue';
+	import { defineComponent } from 'vue';
+	import { serializeJson, priceStyle } from '@/util/utils.js'
+
+	const priceStyleS = (price) => priceStyle(price);
 </script>
+
+<script type="text/javascript">
+	export default defineComponent({
+		name: "OrderTracking",
+		data(){
+			return{
+				orderData: {}
+			}
+		},
+		mounted(){
+			this.orderData = serializeJson(localStorage.orderData);
+		}
+	})
+</script>
+
 <template>
   <div>
     <slot name="header"></slot>
@@ -16,42 +34,45 @@
           <h3 class="page-header__title">Отслеживание заказа</h3>
         </div>
           <div class="tracking-top__content">
-            <h3 class="tracking__title">Заказ: 11817543025</h3>
+            <h3 class="tracking__title">Заказ: {{orderData.order_number}}</h3>
             <div class="tracking-top__content-block">
               <ul class="tracking-top__content-block-points">
                 <li>
                   <div class="tracking-top__content-block-point">Дата:</div>
-                  <div class="tracking-top__content-point-date tracking-top__content-point-info">15.08.2023</div>
+                  <div class="tracking-top__content-point-date tracking-top__content-point-info">{{orderData.create_data}}</div>
                 </li>
                 <li>
                   <div class="tracking-top__content-block-point">Оплата:</div>
-                  <div class="tracking-top__content-point-payment tracking-top__content-point-info">Онлайн через Kaspi.kz</div>
+                  <div class="tracking-top__content-point-payment tracking-top__content-point-info">
+										<!-- {{`${orderData.payment_method[0]}${orderData.payment_method.slice(1)}`}} -->
+										{{orderData.payment_method}}
+									</div>
                 </li>
                 <li>
                   <div class="tracking-top__content-block-point">Статус оплаты:</div>
                   <div class="tracking-top__content-point-payment-status tracking-top__content-point-info">
-                    <span class="tracking-top__content-point-payment-status-overdue">Просрочено</span>
-                    <span class="tracking-top__content-point-payment-status-await" style="margin-left: 10px;">Ожидается оплата</span>
-                    <span class="tracking-top__content-point-payment-status-confirmed" style="margin-left: 10px;">Оплачено</span>
-                    <a class="tracking-top__content-point-payment-status-link tracking-top__content-point-info">
+                    <!-- <span class="tracking-top__content-point-payment-status-overdue">Просрочено</span> -->
+                    <span class="tracking-top__content-point-payment-status-await">Ожидается оплата</span>
+                    <!-- <span class="tracking-top__content-point-payment-status-confirmed" style="margin-left: 10px;">Оплачено</span> -->
+                    <!-- <a class="tracking-top__content-point-payment-status-link tracking-top__content-point-info">
                       Оплатить
-                    </a>
+                    </a> -->
                   </div>
                 </li>
                 <li>
                   <div class="tracking-top__content-block-point">Доставка:</div>
-                  <div class="tracking-top__content-point-delivery-method tracking-top__content-point-info">Самовывоз</div>
+                  <div class="tracking-top__content-point-delivery-method tracking-top__content-point-info">{{orderData.delivery_type}}</div>
                 </li>
                 <li>
                   <div class="tracking-top__content-block-point">Итого:</div>
-                  <div class="tracking-top__content-point-price-total tracking-top__content-point-info">1450 ₸</div>
+                  <div class="tracking-top__content-point-price-total tracking-top__content-point-info">{{priceStyleS(orderData.amount)}} ₸</div>
                 </li>
               </ul>
             </div>
           </div>
           <div class="tracking-center__content">
             <div class="tracking-center__content-block">
-              Спасибо, <strong>Человек</strong> ваш заказ будет отправлен на обработку без подтверждающего звонка, если у вас возникнут вопросы, Вы можете написать нам на Whatsapp.
+              Спасибо, <strong>{{orderData.username}}</strong> ваш заказ будет отправлен на обработку без подтверждающего звонка, если у вас возникнут вопросы, Вы можете написать нам на Whatsapp.
             </div>
           </div>
           <div class="tracking-bottom__content">

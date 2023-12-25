@@ -23,6 +23,27 @@ export const debounce = (func, ms) =>{
     };
 }
 
+export function randomNum(len){
+	let result = '';
+	for(let _ = 0; _ < len; _ ++)
+		result += Math.floor(Math.random() * 9).toString();
+	return result
+}
+
+export function serializeJson(data){
+  if (data){
+    try {data = JSON.parse(data)}
+    catch{
+      // Ignore malformed lines.
+    }
+  }
+
+  if (typeof data !== 'object')
+    data = {}
+
+  return data;
+}
+
 // Calculate Amount Sum and Discount Price
 export function amountSum(dishes, shoppingCart, amount, oldPriceCalc = false, oldPrice = 0){
 	amount = 0;
@@ -48,4 +69,4 @@ export const settings = {
 	version: '2.1' // Версия Я.Карт
 }
 
-export default {priceStyle, percentCalculate, bodyOvr, debounce, amountSum, settings};
+export default {priceStyle, percentCalculate, bodyOvr, serializeJson, debounce, amountSum, randomNum, settings};

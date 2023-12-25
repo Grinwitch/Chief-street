@@ -17,21 +17,21 @@
 							<ul class="footer-item__content-list">
 								<li><a href="#" class="footer-item__content-link">Вакансии</a></li>
 								<li><a href="#" class="footer-item__content-link">Контакты</a></li>
-								<li><a href="#" class="footer-item__content-link">Франшиза</a></li>
+								<li><a href="https://www.instagram.com/chefs_street_food_/?igshid=MzRlODBiNWFlZA==" target="_blank" class="footer-item__content-link">Франшиза</a></li>
 							</ul>
 							<ul class="footer-item__content-list-social">
 								<li>
-									<a href="#" class="footer-item__content-link-social">
+									<a href="https://www.instagram.com/chefs_street_food_/?igshid=MzRlODBiNWFlZA==" target="_blank" class="footer-item__content-link-social">
 										<img src="@/assets//img/social-icons/icons8-instagram.svg" alt="social icon" class="footer-item__content-link-icon">
 									</a>
 								</li>
 								<li>
-									<a href="#" class="footer-item__content-link-social">
+									<a href="https://api.whatsapp.com/send?phone=77025036161" target="_blank" class="footer-item__content-link-social">
 										<img src="@/assets/img/social-icons/icons8-whatsapp.svg" alt="social icon" class="footer-item__content-link-icon">
 									</a>
 								</li>
 								<li>
-									<a href="#" class="footer-item__content-link-social">
+									<a href="#" target="_blank" class="footer-item__content-link-social">
 										<img src="@/assets//img/social-icons/icons8-telegram.svg" alt="social icon" class="footer-item__content-link-icon">
 									</a>
 								</li>
@@ -53,15 +53,15 @@
 						<div class="footer-item__content">
 							<h2 class="footer-item__content-title">Установите наше приложение</h2>
 							<div class="footer-item__content-mobile-app">
-								<a href="#" class="footer-item__content-mobile-app-link">
+								<a href="https://www.apple.com/ru/app-store/" target="_blank" class="footer-item__content-mobile-app-link">
 									<img src="@/assets//img/icons/app-store.svg" alt="" class="footer-item__content-mobile-app-img">
-								</a>
-								<a href="#" class="footer-item__content-mobile-app-link">
+								</a>	
+								<a href="https://play.google.com/store/games?hl=ru&gl=US&pli=1" target="_blank" class="footer-item__content-mobile-app-link">
 									<img src="@/assets//img/icons/google-play.svg" alt="" class="footer-item__content-mobile-app-img">
 								</a>
 							</div>
 							<div class="footer-item__content-call">
-								<a href="" class="footer-item__content-call-link footer-item__content-phone">+7 (777) 777-77-77</a>
+								<a href="tel:+77025036161" class="footer-item__content-call-link footer-item__content-phone">+7 (702) 503-61-61</a>
 								<a href="" class="footer-item__content-call-link footer-item__content-order-call">Заказать звонок</a>
 							</div>
 						</div>

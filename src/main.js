@@ -8,6 +8,9 @@ import './assets/css/cart.css';
 import './assets/css/checkout.css';
 import './assets/css/map.css';
 import './assets/css/tracking.css'
+import './assets/css/textpage.css';
+import './assets/css/error.css';
+import './assets/css/profile-auth.css';
 import './assets/css/adaptive.css';
 import './assets/css/transition.css';
 

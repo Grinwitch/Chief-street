@@ -1,19 +1,5 @@
 import { createStore } from 'vuex'
-
-
-function serializeJson(data){
-  if (data){
-    try {data = JSON.parse(data)}
-    catch{
-      // Ignore malformed lines.
-    }
-  }
-
-  if (typeof data !== 'object')
-    data = {}
-
-  return data;
-}
+import { serializeJson } from '@/util/utils.js'
 
 export default createStore({
 	state: {

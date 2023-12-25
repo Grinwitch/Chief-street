@@ -1,3 +1,13 @@
+<script setup>
+	import { defineComponent } from 'vue';
+</script>
+
+<script type="text/javascript">
+	export default defineComponent({
+		name: "cartNone",
+	})
+</script>
+
 <template>
 	<div>
 		<slot name="header"></slot>

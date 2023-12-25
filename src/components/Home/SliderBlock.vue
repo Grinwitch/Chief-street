@@ -34,13 +34,7 @@
 					
 					<swiper-slide>
 						<div class="home-slider_container">
-							<img src="@/assets/img/1qhtfg4dgyde03dloh642o9n9ik6hvum.png" class="home-slider_img">
-						</div>
-					</swiper-slide>
-
-					<swiper-slide>
-						<div class="home-slider_container">
-							<img src="@/assets/img/als2eqby34h0jqoscvkiswbvp0a0njxi.png" class="home-slider_img">
+							<img src="@/assets/img/banner.jpg" class="home-slider_img">
 						</div>
 					</swiper-slide>
 				</swiper>

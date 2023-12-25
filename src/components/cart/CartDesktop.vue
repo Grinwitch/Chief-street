@@ -99,7 +99,7 @@
 						<p>Вернитесь на главное меню что бы найти всё что нужно.</p>
 					</div>
 
-					<button class="cart-none__btn">На главную</button>
+					<button class="cart-none__btn" @click="$router.push({name: 'home'})">На главную</button>
 				</div>
 
 				<div class="container" v-else>

@@ -4,7 +4,12 @@ import CartView from '@/views/CartView.vue';
 import CheckOut from '@/views/CheckOut.vue';
 import InfoView from '@/views/InfoView.vue';
 import CartNone from '@/views/CartNone.vue';
+import TextPage from '@/views/TextPage.vue';
+import NotFound from '@/views/NotFound.vue';
 import OrderTracking from '@/views/OrderTracking.vue';
+import LoginPage from '@/views/LoginPage.vue';
+import RegisterPage from '@/views/RegisterPage.vue';
+import ForgotPassword from '@/views/ForgotPassword.vue';
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,18 +48,35 @@ const router = createRouter({
 			component: CartNone
 		},
 		{
-			path: '/tracking',
+			path: '/tracking/:track',
 			name: 'tracking',
 			component: OrderTracking
+		},
+		{
+			path: '/textpage',
+			name: 'textpage',
+			component: TextPage
+		},
+		{
+			path: '/:pathMatch(.*)*',
+			name: 'notFound',
+			component: NotFound,
+		},
+		{
+			path: '/login',
+			name: 'login',
+			component: LoginPage
+		},
+		{
+			path: '/register',
+			name: 'regiser',
+			component: RegisterPage
+		},
+		{
+			path: '/forgot-password',
+			name: 'forgot-password',
+			component: ForgotPassword
 		}
-		// {
-		//   path: '/about',
-		//   name: 'about',
-		//   // route level code-splitting
-		//   // this generates a separate chunk (About.[hash].js) for this route
-		//   // which is lazy-loaded when the route is visited.
-		//   component: () => import('../views/AboutView.vue')
-		// }
 	]
 })
 

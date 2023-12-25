@@ -19,31 +19,31 @@
 
         <div class="info-desktop__body-block">
           <div class="info-desktop__body-item-block">
-            <div class="info-desktop__body-item-container">
-              Чат с оператором
-              <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img">
-            </div>
+            <a href="/profile" class="info-desktop__body-item-container">
+              Доставка и оплата
+              <!-- <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img"> -->
+            </a>
           </div>
 
           <div class="info-desktop__body-item-block">
-            <div class="info-desktop__body-item-container">
+            <a href="/profile" class="info-desktop__body-item-container">
+              Контакты
+              <!-- <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img"> -->
+            </a>
+          </div>
+
+          <div class="info-desktop__body-item-block">
+            <a href="/profile" class="info-desktop__body-item-container">
+              Франшиза
+              <!-- <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img"> -->
+            </a>
+          </div>
+
+          <div class="info-desktop__body-item-block">
+            <a href="/profile" class="info-desktop__body-item-container">
               Правовая информация
-              <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img">
-            </div>
-          </div>
-
-          <div class="info-desktop__body-item-block">
-            <div class="info-desktop__body-item-container">
-              О приложении
-              <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img">
-            </div>
-          </div>
-
-          <div class="info-desktop__body-item-block">
-            <div class="info-desktop__body-item-container">
-              Открой свою пиццерию
-              <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img">
-            </div>
+              <!-- <img src="@/assets/img/icons8-развернуть-50.png" class="open-right-img"> -->
+            </a>
           </div>
 
         </div>
@@ -69,7 +69,13 @@
 
 .info-desktop__body-item-block{
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all .05s;
+}
+
+.info-desktop__body-item-block:hover{
+  color: var(--cl_red);
 }
 
 .info-desktop__body-item-container-additionally-block{
@@ -88,24 +94,27 @@
 }
 
 .info-desktop__body-item-container img{
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
+  margin-left: 15px;
 }
 
 .info-desktop__body-item-container{
   width: 100%;
-  padding: 20px 15px;
+  padding: 5px 10px;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 16px;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #333333aa;
+  line-height: 140%;
 }
 
 .info-desktop__body-block{
-  padding: 20px 10px 10px 10px;
+  padding: 5px;
 }
 
 .info-desktop-block__title-logo-desc-block{

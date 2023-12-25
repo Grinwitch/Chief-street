@@ -54,7 +54,7 @@
 					<div class="header__container">
 						<div class="header__left-block">
 							<div class="header__left-block-logo-block" @click="$router.push({name: 'home'})">
-								<img src="@/assets/img/44fsf3cseyg3dhqk7w2zbpuc09x1kba3.svg" class="header__left-block-logo">
+								<img src="@/assets/img/logo-9.png" class="header__left-block-logo">
 							</div>
 
 							<div class="header__left-block-info-block">
@@ -70,7 +70,7 @@
 
 						<div class="header__right-block">
 							<div class="header__right-phone-number">
-								<p class="header__right-phone-number-text">+7 (999) 375-59-72</p>
+								<a href="tel:+77025036161" class="header__right-phone-number-text">+7 (702) 503-61-61</a>
 							</div>
 
 							<!-- <div class="header__right-background-change-button-block">
@@ -83,7 +83,7 @@
 		  							</label>
 								</div>
 							</div> -->
-							
+
 
 							<div class="header__right-auth-button" @click="$router.push({name: 'profile'})">
 								<img src="@/assets/img/svgexport-3.svg" class="header__right-auth-button-img">
@@ -94,25 +94,16 @@
 
 					<div class="mobile-header">
 						<div class="mobile-header__container">
-							<div class="mobile-header__tel-icnon-block">
-								<img src="@/assets/img/icons8-телефон-50.png" class="header__right-phone-number-img">
-							</div>
+							<a class="mobile-header__tel-icnon-block">
+								
+							</a>
 
 							<div class="mobile-header__deliver--block" @click="$router.push({name: 'home'})">
-								Chief Street Food
+                <img src="@/assets/img/logo-mobile.png" alt="" class="mobile-header__logo">
 							</div>
-							<div class="mobile-header__info-block">
-								<!-- <div class="header__right-background-change-button-block">
-									<div>
-		  								<input type="checkbox" class="checkbox" id="checkbox">
-		  								<label for="checkbox" class="checkbox-label">
-		    								<i class="fas fa-moon"></i>
-		    								<i class="fas fa-sun"></i>
-		    								<span class="ball"></span>
-		  								</label>
-									</div>
-								</div> -->
-							</div>
+							<a href="tel:+77025036161" class="mobile-header__info-block">
+								<img src="@/assets/img/icons8-телефон-50.png" class="header__right-phone-number-img">
+							</a>
 
 						</div>
 					</div>

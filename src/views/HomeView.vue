@@ -4,7 +4,6 @@
 	import RefBlock from '@/components/Home/RefBlock.vue';
 	import DishesBlock from '@/components/Home/DishesBlock.vue';
 	import MobilleInfo from '@/components/Home/MobilleInfo.vue';
-	import DesctopInfo from '@/components/Home/DesctopInfo.vue';
 
 	const bodyOvrS = (state) => bodyOvr(state);
 </script>
@@ -28,7 +27,7 @@
 				<div class="" v-show="bodyOvrS(reqState)">
 					<div class="mobile-cart__preloader-block">
 	          <div class="mobile-cart__preloader-container">
-							<slot name="preloader"></slot>
+							<slot name="preloader"></slot>	
 	          </div>
 	    		</div>
 				</div>
