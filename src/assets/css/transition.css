@@ -92,6 +92,29 @@
 	transform: translate(-50%, 100%);
 }
 
+
+/* Auth Transition */
+
+.auth-enter-active,
+.auth-leave-active {
+	transition: all .5s ease-in-out;
+}
+
+.auth-enter-from {
+	visibility: hidden;
+	opacity: 0;
+	bottom: 70%;
+}
+
+.auth-leave-to {
+	opacity: 0;
+	visibility: hidden;
+	bottom: -100%;
+}
+
+
+/* Auth Transition end */
+
 @media screen and (max-width: 600px) {
 	.cart_m-enter-from,
 	.cart_m-leave-to {

@@ -20,6 +20,7 @@
 
 body{
   background-color: #eee;
+  /* overflow-x: hidden; */
 }
 
 .mobile-cart__preloader-container{
@@ -67,6 +68,7 @@ body{
 
 .home__referal-block{
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: var(--cl_white);
   border-radius: 12px;
   padding: 30px 20px;
@@ -304,6 +306,7 @@ body{
 }
 
 .cart-desktop,
+.text-page__content,
 .tracking__content {
   padding: 30px 0 60px;
   min-height: 70vh;

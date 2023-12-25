@@ -1,5 +1,6 @@
 .tracking {
     width: 100%;
+    padding: 0 15px;
 }
 
 .tracking__content {
@@ -50,6 +51,9 @@
     align-items: center;
 }
 
+.tracking-top__content-block-points{
+  width: 100%;
+}
 
 .tracking-top__content-block-points-info {
     margin-left: 15px;
@@ -62,7 +66,8 @@
 }
 
 .tracking-top__content-block-point {
-    width: 120px;
+    width: 30%;
+    min-width: 111px;
     font-weight: 600;
 }
 

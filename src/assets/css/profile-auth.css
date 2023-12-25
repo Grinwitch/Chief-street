@@ -1,0 +1,431 @@
+
+
+/* General styles */
+
+.profile-input,
+.profile-input,
+.profile-text {
+    width: 100%;
+}
+
+.profile-input {
+    border-radius: 12px;
+    border: 1px solid #33333355;
+    padding: 10px 15px;
+    font-size: 16px;
+
+}
+
+.profile-name,
+.profile-email,
+.profile-password,
+.profile-password-repeat {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.profile-text {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.profile-button {
+    background: #ca1931;
+    margin: 0 0 0 auto;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    transition: 0.6s;
+    border: 2px solid #ca1931;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.profile-button:hover {
+    background: #fff;
+    color: #ca1931;
+}
+
+.profile-label {
+    color: #777;
+    font-size: 14px;
+}
+
+.profile-language-select {
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-language-current {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #33333355;
+    color: var(--cl_black);
+    background: var(--cl_white);
+}
+
+.profile-language-list {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    background: var(--cl_white);
+    box-shadow: 1px 1px 5px #33333322;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.profile-language-point {
+    color: var(--cl_black);
+}
+
+.profile-input-required {
+    color: red;
+}
+
+.profile-auth-list {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    background: var(--cl_white);
+    z-index: 100;
+}
+
+.profile-auth-point {
+    font-size: 14px;
+    color: var(--cl_black);
+    background: var(--cl_white);
+    padding: 15px 20px;
+    text-align: center;
+    margin: 0 10px;
+    background: #eee;
+    border-radius: 12px;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.profile-auth-point-active {
+    color: var(--cl_white);
+    background: var(--cl_red);
+}
+
+.return-homepage {
+    color: var(--cl_red);
+    position: relative;
+}
+
+.return-homepage:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--cl_red);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.auth-page-login,
+.auth-page-register {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 0 15px 15px 15px;
+    bottom: 0;
+    z-index: 95;
+}
+
+/* General styles end */
+
+/* Login Page styles */
+
+.login-page {
+    width: 100%;
+    height: 80vh;
+}
+
+.login-page__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.login-page__content {
+    max-width: 350px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+/* Login Page Top */
+
+.login-page-content__top {
+    margin-bottom: 35px;
+}
+
+.login-page-content__top-photo {
+    width: 40%;
+    margin: 0 auto;
+}
+
+/* Login Page Main */
+
+.login-page-content__main {
+    padding: 0 15px 15px 15px;
+    width: 100%;
+    background: var(--cl_white);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: .4s ease-out;
+}
+
+.login-page-content__main-title {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cl_black)
+}
+
+.login-page-content__main-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.login-page-content__main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Login Page Bottom */
+
+.login-page-content__bottom {
+    width: 100%;
+}
+
+.login-page-content-bottom__forgot-password {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.login-page-content-bottom__link {
+    color: var(--cl_red);
+    position: relative;
+}
+
+.login-page-content-bottom__link:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--cl_red);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+/* Login Page styles end*/
+
+
+/* Register Page styles */
+
+.register-page {
+    width: 100%;
+    height: 92vh;
+}
+
+.register-page__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.register-page__content {
+    max-width: 350px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+/* Register Page Top */
+
+.register-page-content__top {
+    margin-bottom: 35px;
+}
+
+.register-page-content__top-photo {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Register Page Main */
+
+.register-page-content__main {
+    padding: 15px;
+    width: 100%;
+    background: var(--cl_white);
+    border-radius: 25px;
+}
+
+.register-page-content__main-title {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cl_black)
+}
+
+.register-page-content__main-name,
+.register-page-content__main-password {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.register-page-content__main-checkbox {
+    margin-right: 10px;
+}
+
+.register-page-content__main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Register Page Bottom */
+
+.register-page-content__bottom {
+    width: 100%;
+}
+
+.register-page-content-bottom__forgot-password {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.register-page-content-bottom__link {
+    color: var(--cl_red);
+    position: relative;
+}
+
+.register-page-content-bottom__link:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--cl_red);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+/* Register Page styles end */
+
+
+/* Forgot Password styles */
+
+.forgot-page {
+    width: 100%;
+    height: 92vh;
+}
+
+.forgot-page__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.forgot-page__content {
+    max-width: 350px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+/* forgot Page Top */
+
+.forgot-page-content__top {
+    margin-bottom: 35px;
+}
+
+.forgot-page-content__top-photo {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* forgot Page Main */
+
+.forgot-page-content__main {
+    padding: 15px;
+    width: 100%;
+    background: var(--cl_white);
+    border-radius: 25px;
+}
+
+.forgot-page-content__main-title {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cl_black)
+}
+
+.forgot-page-content__main-name,
+.forgot-page-content__main-password {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.forgot-page-content__main-checkbox {
+    margin-right: 10px;
+}
+
+.forgot-page-content__main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* forgot Page Bottom */
+
+.forgot-page-content__bottom {
+    width: 100%;
+}
+
+.forgot-page-content-bottom__forgot-password {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.forgot-page-content-bottom__link {
+    color: var(--cl_red);
+    position: relative;
+}
+
+.forgot-page-content-bottom__link:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--cl_red);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+/* Forgot Password styles end */

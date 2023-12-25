@@ -198,7 +198,7 @@
   }
 
 .modal-card {
-    max-width: 450px;
+    width: 550px;
     margin: 0;
     box-shadow: 1px 1px 10px #33333355;
     border-radius: 25px;
@@ -333,6 +333,7 @@
     text-align: center;
     display: block;
     text-decoration: none;
+    cursor: pointer;
   }
 
 .m-modal-product__cart_icon {
@@ -352,6 +353,7 @@
     align-items: center;
     justify-content: center;
     transform: translate(-30%, 20%);
+    cursor: pointer;
   }
 
 .modal-card__remove-line {

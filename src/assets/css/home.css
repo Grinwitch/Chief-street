@@ -88,6 +88,7 @@
   margin: 0 0 0 auto;
   border-radius: 50%;
   transition: .3s linear;
+  cursor: pointer;
 }
 
 .category-favorite-active {
